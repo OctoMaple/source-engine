@@ -22,6 +22,6 @@ jobs:
     - name: Upload Executables
       uses: actions/upload-artifact@v3
       with:
-        name: executables
+        name: hl2_build
         path: |
           hl2/*
