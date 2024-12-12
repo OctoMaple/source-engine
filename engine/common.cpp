@@ -999,7 +999,7 @@ const char *COM_DXLevelToString( int dxlevel )
 	}
 	else
 	{
-		switch( dxlevel )
+		/* switch( dxlevel )
 		{
 		case 60:
 			return "gamemode - 6.0";
@@ -1029,7 +1029,19 @@ const char *COM_DXLevelToString( int dxlevel )
 			}
 		default:
 			return "gamemode";
-		}
+		} */
+
+		 // Set dxlevel to 90 by default
+    	dxlevel = 90; 
+
+    	if (bHalfPrecision)
+    	{
+        	return "9.0 (half-precision)";
+    	}
+    	else
+    	{
+        	return "9.0 (full-precision)";
+    	}
 	}
 }
 

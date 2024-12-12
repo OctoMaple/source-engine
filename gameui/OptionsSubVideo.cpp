@@ -259,25 +259,31 @@ public:
 		m_pDXLevel->DeleteAllItems();
 		for (int i = 0; i < ARRAYSIZE(g_DirectXLevels); i++)
 		{
-			// don't allow choice of lower dxlevels than the default, 
-			// unless we're already at that lower level or have it forced
-			if (!CommandLine()->CheckParm("-dxlevel") &&
-				g_DirectXLevels[i] != config.dxSupportLevel &&
-				g_DirectXLevels[i] < pKeyValues->GetInt("ConVar.mat_dxlevel"))
-				continue;
+    		// Determine the current dxlevel
+    		int currentDXLevel = pKeyValues->GetInt("ConVar.mat_dxlevel", 90); // Default to 90 if not set
 
-			KeyValues *pTempKV = new KeyValues("config");
-			if (g_DirectXLevels[i] == pKeyValues->GetInt("ConVar.mat_dxlevel")
-				|| materials->GetRecommendedConfigurationInfo( g_DirectXLevels[i], pTempKV ))
-			{
-				// add the configuration in the combo
-				char szDXLevelName[64];
-				GetNameForDXLevel( g_DirectXLevels[i], szDXLevelName, sizeof(szDXLevelName) );
-				m_pDXLevel->AddItem( szDXLevelName, new KeyValues("dxlevel", "dxlevel", g_DirectXLevels[i]) );
-			}
+    		// Don't allow choice of lower dxlevels than the default,
+    		// unless we're already at that lower level or have it forced
+    		if (!CommandLine()->CheckParm("-dxlevel") &&
+        		g_DirectXLevels[i] != config.dxSupportLevel &&
+        		g_DirectXLevels[i] < currentDXLevel)
+    		{
+        		continue;
+    		}
 
-			pTempKV->deleteThis();
+    		KeyValues *pTempKV = new KeyValues("config");
+    		if (g_DirectXLevels[i] == currentDXLevel ||
+        		materials->GetRecommendedConfigurationInfo(g_DirectXLevels[i], pTempKV))
+    		{
+        		// Add the configuration in the combo
+        		char szDXLevelName[64];
+        		GetNameForDXLevel(g_DirectXLevels[i], szDXLevelName, sizeof(szDXLevelName));
+        		m_pDXLevel->AddItem(szDXLevelName, new KeyValues("dxlevel", "dxlevel", g_DirectXLevels[i]));
+    		}
+
+    		pTempKV->deleteThis();
 		}
+
 		pKeyValues->deleteThis();
 
 		m_pModelDetail = new ComboBox( this, "ModelDetail", 6, false );
