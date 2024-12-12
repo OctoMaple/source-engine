@@ -170,8 +170,8 @@ bool CVguiMatSysApp::PreInit( )
 		return false;
 
 	const char *pArg;
-	int iWidth = 1024;
-	int iHeight = 768;
+	int iWidth = 1920;
+	int iHeight = 1080;
 	bool bWindowed = (CommandLine()->CheckParm( "-fullscreen" ) == NULL);
 	if (CommandLine()->CheckParm( "-width", &pArg ))
 	{

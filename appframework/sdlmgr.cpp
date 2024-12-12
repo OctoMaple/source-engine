@@ -750,8 +750,8 @@ bool CSDLMgr::CreateGameWindow( const char *pTitle, bool bWindowed, int width, i
 
 		this->GetNativeDisplayInfo( -1, defaultWidth, defaultHeight, defaultRefreshHz );
 
-		if ( 0 == defaultWidth ) defaultWidth = 1024;
-		if ( 0 == defaultHeight ) defaultHeight = 768;
+		if ( 0 == defaultWidth ) defaultWidth = 1920;
+		if ( 0 == defaultHeight ) defaultHeight = 1080;
 
 		width = m_WindowWidth ? m_WindowWidth : defaultWidth;
 		height = m_WindowHeight ? m_WindowHeight : defaultHeight;
