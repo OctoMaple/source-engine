@@ -593,6 +593,17 @@ static void OverrideMaterialSystemConfigFromCommandLine( MaterialSystem_Config_t
 			conVar.SetValue( config.dxSupportLevel );
 		}
 	}
+	else
+	{
+    	// Default to DirectX 9.0 if no -dxlevel parameter is provided
+    	config.dxSupportLevel = 90;
+		
+		ConVarRef conVar( "mat_dxlevel" );
+		if ( conVar.IsValid() )
+		{
+			conVar.SetValue( config.dxSupportLevel );
+		}
+	}
 
 	// Check for windowed mode command line override
 	if ( CommandLine()->FindParm( "-sw" ) || 
