@@ -1,9 +1,9 @@
 # Source Engine
-[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/hl2.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/hl2.yml) 
-[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/episodic.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/episodic.yml)
-[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/hl2dm.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/hl2dm.yml)
-[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/portal.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/portal.yml)
-[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/hl1.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/hl1.yml)
+[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/hl2.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/hl2.yml)\
+[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/episodic.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/episodic.yml)\
+[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/hl2mp.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/hl2mp.yml)\
+[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/portal.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/portal.yml)\
+[![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/hl1.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/hl1.yml)\
 [![GitHub Actions Status](https://github.com/ArpaRec/source-engine/actions/workflows/cstrike.yml/badge.svg)](https://github.com/ArpaRec/source-engine/actions/workflows/cstrike.yml)
  
 
